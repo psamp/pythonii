@@ -1,0 +1,23 @@
+#R8.19
+
+set1 = { 1, 2, 3, 4, 5 }
+set2 = { 2, 4, 6, 8 }
+set3 = { 1, 5, 9, 13, 17 }
+a. Is set1 a subset of set2?
+b. Is the intersection of set1 and set3 empty?
+c. What is the result of performing set union on set1 and set2?
+d. What is the result of performing set intersection on set2 and set3?
+e. What is the result of performing set intersection on all three sets?
+f. What is the result of performing the set difference on set1 and set2
+(set1 – set2)?
+g. What is the result of the instruction set1.discard(5)?
+h. What is the result of the instruction set2.discard(5)? 
+
+a. no
+b. no, it's {1}
+c. {1, 2, 3, 4, 5, 6, 8}
+d. {}
+e. {}
+f. {1, 3, 5}
+g. {1, 2, 3, 4}
+h. An error
