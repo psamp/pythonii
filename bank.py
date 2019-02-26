@@ -19,3 +19,6 @@ class BankAccount:
 
     def withdraw(self, amount):
         self._balance -= amount
+
+    def __str__(self):
+        return ('%s >> $%.2f' % (self._owner, self._balance))
