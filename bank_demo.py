@@ -1,14 +1,35 @@
 from bank import BankAccount
+import uuid
+
+def createAccount():
+    owner = input('Enter your name: ')
+    balance = float(input('Enter your initial deposit: '))
+    id = uuid.uuid4().hex
+
+    return BankAccount(owner, balance, id)
+
+def running(account):
+    choice = input("1. Deposit\n2. Withdraw\n3. Check\n")
+
+    if choice == '1':
+        amount = float(input('How much would you like to deposit?\n'))
+        account.deposit(amount)
+    if choice == '2':
+        amount = float(input('How much would you like to withdraw?\n'))
+        account.withdraw(amount)
+    else:
+        print(account)
+
 
 def main():
-    fatima = BankAccount("Fatima Haiz", 0.0, "67255")
-    cesaire = BankAccount("Aime Cesaire", 75.0, "12345")
+    account = createAccount()
+    playing = True
 
-    fatima.deposit(100.0)
-    cesaire.withdraw(50.0)
+    while playing:
+        running(account)
+        quit = input('Quit? Y/N')
 
-    print(fatima)
-    print(cesaire)
+        playing = True if quit != 'Y' else False
 
 # call main
 main()
