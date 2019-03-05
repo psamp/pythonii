@@ -1,22 +1,13 @@
 import statistics
+import itertools
 
 def make_dictionary(keys, values):
     # throw an exception if not same no. of keys as values
     if len(keys) != len(values):
         raise Exception('Must have equal number of keys and values')
 
-    dictionary = dict()
-
-    # loop over both lists
-    for index in range(len(keys)):
-        # pull out corresponding keys and values
-        key = keys[index]
-        value = values[index]
-
-        # for the key, insert the value into the dict
-        dictionary[key] = value
-    
-    return dictionary
+    # use zip to create dictionary from lists
+    return dict(zip(keys, values))
 
 def main():
     names = ['Tonya', 'Mary', 'Alexis', 'Angel']
