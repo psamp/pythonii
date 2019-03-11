@@ -4,7 +4,7 @@ import itertools
 def make_dictionary(keys, values):
     # throw an exception if not same no. of keys as values
     if len(keys) != len(values):
-        raise Exception('Must have equal number of keys and values')
+        raise Exception('Must have equal number of keys and values to create dictionary.')
 
     # use zip to create dictionary from lists
     return dict(zip(keys, values))
