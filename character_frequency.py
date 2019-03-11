@@ -2,18 +2,27 @@
 # Dr Lawrence - Python 2
 # 2-28-19
 # Character Frequency - Determine the frequencey of the individual
-# letters of a user-given word
+# letters of a user-given word using a dictionary
 
 def main():
     # get user input, lowercase it
     word = input('Enter a word: ').lower()
 
-    # use a generator expression to iterate over each character
-    # and place it in a tuple with the default frequency value, 0
-    # the tuples will then decompose into a dictionary entry when passed
-    freq_dict = dict((char, 0) for char in word)
+    # dict for storing letters and frequenches
+    character_freq = {}
 
-    print(freq_dict)
+    # for each character
+    for char in word:
+        # if previously found, increment the frequency counter
+        if char in character_freq:
+            character_freq[char] += 1
+        # else update the freq counter from zero
+        else:
+            character_freq[char] = 1
+
+    # print character freq's keys and values
+    for char, freq in character_freq.items():
+        print('%s:\t%d' % (char, freq))
 
 # call main
 main()
