@@ -1,3 +1,7 @@
+# Princess Sampson
+# Dr. Lawrence - Python II
+# Bank account class advanced demo
+
 from bank import BankAccount
 import uuid
 

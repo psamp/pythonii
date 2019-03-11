@@ -1,3 +1,7 @@
+# Princess Sampson
+# Dr. Lawrence - Python II
+# Class modeling a simple bank account with depositing and withdrawals
+
 class BankAccount:
 
     def __init__(self, owner, balance, accountNumber):
